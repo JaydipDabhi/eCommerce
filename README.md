@@ -40,32 +40,44 @@ eCommerce
 3. **Install PHP dependencies**:
    This project uses Composer to manage PHP dependencies. To install them, run the following command:
 
--   composer update
+-   ````composer
+    update```
+    ````
 
 4. **Install Node.js dependencies**:
    This project uses Node.js for front-end assets. To install the necessary dependencies, run:
 
--   npm install
+-   ````npm
+    install```
+    ````
 
 5. **Copy .env.example to .env**:
    The .env file contains environment-specific variables (such as your database configuration). Copy the contents of .env.example to a new .env file:
 
--   cp .env.example .env
+-   ````cp
+    .env.example .env```
+    ````
 
 6. **Generate application key**:
    Laravel requires an application key for encryption and other security purposes. Generate the application key by running:
 
--   php artisan key:generate
+-   ````php
+    artisan key:generate```
+    ````
 
 7. **Run database migrations**:
    Laravel includes migrations to create the required database tables. Run the following command to set up the database schema:
 
--   php artisan migrate
+-   ````php
+    artisan migrate```
+    ````
 
 8. **Run the Laravel development server**:
    Start Laravel’s built-in development server by running:
 
--   php artisan serve
+-   ````php
+    artisan serve```
+    ````
 
 ---
 
