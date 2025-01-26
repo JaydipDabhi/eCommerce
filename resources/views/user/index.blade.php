@@ -10,7 +10,7 @@
                 </div>
                 <div class="col-lg-9">
                     <div class="page-content my-account__dashboard">
-                        <p>Hello <strong>User</strong></p>
+                        <p>Hello <strong>{{ Auth::check() ? Auth::user()->name : 'Guest User' }}</strong></p>
                         <p>From your account dashboard you can view your <a class="unerline-link"
                                 href="account_orders.html">recent
                                 orders</a>, manage your <a class="unerline-link" href="account_edit_address.html">shipping

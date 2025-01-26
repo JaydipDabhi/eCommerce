@@ -405,8 +405,10 @@
                                                         alt="">
                                                 </span>
                                                 <span class="flex flex-column">
-                                                    <span class="body-title mb-2">Kristin Watson</span>
-                                                    <span class="text-tiny">Admin</span>
+                                                    <span
+                                                        class="body-title mb-2">{{ Auth::check() ? Auth::user()->name : 'Guest User' }}</span>
+                                                    <span
+                                                        class="text-tiny">{{ Auth::check() ? (Auth::user()->utype === 'ADM' ? 'Admin' : Auth::user()->utype) : 'No User' }}</span>
                                                 </span>
                                             </span>
                                         </button>
