@@ -33,8 +33,8 @@ Before you begin, ensure you have the following installed:
 
 2. **Navigate to the project folder**:
 
-```cd eCommerce
-
+```cd
+eCommerce
 ```
 
 3. **Install PHP dependencies**:
