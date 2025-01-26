@@ -18,8 +18,8 @@ Before you begin, ensure you have the following installed:
 
 -   **PHP** (>=8.2 - 8.4)
 -   **Composer**
--   **Node.js** (>=16.0)
--   **NPM** (>=8.0)
+-   **Node.js** (>=22.13.1)
+-   **NPM** (>=10.9.2)
 -   **MySQL** or **MariaDB** (for database)
 -   **Git** (for version control)
 
