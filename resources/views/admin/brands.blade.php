@@ -32,7 +32,7 @@
                             </div>
                         </form>
                     </div>
-                    <a class="tf-button style-1 w208" href="javascript:void(0);"><i class="icon-plus"></i>Add
+                    <a class="tf-button style-1 w208" href="{{ route('admin.brand.add') }}"><i class="icon-plus"></i>Add
                         new</a>
                 </div>
                 <div class="wg-table table-all-user">
@@ -66,34 +66,23 @@
                                             </div>
                                         </td>
                                         <td>{{ $brand->slug }}</td>
-                                        <td><a href="javascript:void(0);" target="_blank">1</a></td>
+                                        <td><a href="javascript:void(0);">0</a></td>
                                         <td>
                                             <div class="list-icon-function">
-                                                <a href="javascript:void(0);">
-                                                    <div class="item edit">
-                                                        <i class="icon-edit-3"></i>
-                                                    </div>
-                                                </a>
-                                                <form action="#" method="POST">
-                                                    <div class="item text-danger delete">
-                                                        <i class="icon-trash-2"></i>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            {{-- <div class="list-icon-function">
                                                 <a href="{{ route('admin.brand.edit', ['id' => $brand->id]) }}">
                                                     <div class="item edit">
                                                         <i class="icon-edit-3"></i>
                                                     </div>
                                                 </a>
                                                 <form action="{{ route('admin.brand.delete', ['id' => $brand->id]) }}"
-                                                    method="POST">@csrf
+                                                    method="POST">
+                                                    @csrf
                                                     @method('DELETE')
                                                     <div class="item text-danger delete">
                                                         <i class="icon-trash-2"></i>
                                                     </div>
                                                 </form>
-                                            </div> --}}
+                                            </div>
                                         </td>
                                     </tr>
                                 @endforeach
