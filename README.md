@@ -58,21 +58,28 @@ cd eCommerce
     cp .env.example .env
     ```
 
-6. **Generate application key**:
+6. **Require Intervention Image 2.7 via Composer**:
+   Run the following command in your terminal or command prompt:
+
+-   ```
+    composer require intervention/image:2.7
+    ```
+
+7. **Generate application key**:
    Laravel requires an application key for encryption and other security purposes. Generate the application key by running:
 
 -   ```
     php artisan key:generate
     ```
 
-7. **Run database migrations**:
+8. **Run database migrations**:
    Laravel includes migrations to create the required database tables. Run the following command to set up the database schema:
 
 -   ```
     php artisan migrate
     ```
 
-8. **Run the Laravel development server**:
+9. **Run the Laravel development server**:
    Start Laravel’s built-in development server by running:
 
 -   ```
