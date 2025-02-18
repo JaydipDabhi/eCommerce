@@ -144,7 +144,7 @@
                 </div>
 
 
-                {{-- <div class="accordion" id="brand-filters">
+                <div class="accordion" id="brand-filters">
                     <div class="accordion-item mb-4 pb-3">
                         <h5 class="accordion-header" id="accordion-heading-brand">
                             <button class="accordion-button p-0 border-0 fs-5 text-uppercase" type="button"
@@ -217,7 +217,7 @@
                             </div>
                         </div>
                     </div>
-                </div> --}}
+                </div>
 
 
                 <div class="accordion" id="price-filters">
