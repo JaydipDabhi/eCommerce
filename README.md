@@ -79,7 +79,21 @@ cd eCommerce
     php artisan migrate
     ```
 
-9. **Run the Laravel development server**:
+9. **Installation for Shopping cart**:
+   Install the package through Composer. Run the Composer require command from the Terminal:
+
+-   ```
+    composer require surfsidemedia/shoppingcart
+    ```
+
+10. **Configuration for Shopping cart**:
+   To save cart into the database so you can retrieve it later, the package needs to know which database connection to use and what the name of the table is. By default the package will use the default database connection and use a table named shoppingcart. If you want to change these options, you'll have to publish the `config` file.
+
+-   ```
+    php artisan vendor:publish --provider="Surfsidemedia\Shoppingcart\ShoppingcartServiceProvider" --tag="config"
+    ```
+
+11. **Run the Laravel development server**:
    Start Laravel’s built-in development server by running:
 
 -   ```
