@@ -47,8 +47,7 @@
                     </div>
                 </div>
 
-
-                <div class="accordion" id="color-filters">
+                {{-- <div class="accordion" id="color-filters">
                     <div class="accordion-item mb-4 pb-3">
                         <h5 class="accordion-header" id="accordion-heading-1">
                             <button class="accordion-button p-0 border-0 fs-5 text-uppercase" type="button"
@@ -83,10 +82,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
-
-                <div class="accordion" id="size-filters">
+                {{-- <div class="accordion" id="size-filters">
                     <div class="accordion-item mb-4 pb-3">
                         <h5 class="accordion-header" id="accordion-heading-size">
                             <button class="accordion-button p-0 border-0 fs-5 text-uppercase" type="button"
@@ -122,8 +120,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
-
+                </div> --}}
 
                 <div class="accordion" id="brand-filters">
                     <div class="accordion-item mb-4 pb-3">
@@ -162,7 +159,6 @@
                     </div>
                 </div>
 
-
                 <div class="accordion" id="price-filters">
                     <div class="accordion-item mb-4">
                         <h5 class="accordion-header mb-2" id="accordion-heading-price">
@@ -182,16 +178,16 @@
                         <div id="accordion-filter-price" class="accordion-collapse collapse show border-0"
                             aria-labelledby="accordion-heading-price" data-bs-parent="#price-filters">
                             <input class="price-range-slider" type="text" name="price_range" value=""
-                                data-slider-min="10" data-slider-max="1000" data-slider-step="5"
-                                data-slider-value="[250,450]" data-currency="$" />
+                                data-slider-min="1" data-slider-max="500" data-slider-step="5"
+                                data-slider-value="[{{ $min_price }},{{ $max_price }}]" data-currency="$" />
                             <div class="price-range__info d-flex align-items-center mt-2">
                                 <div class="me-auto">
                                     <span class="text-secondary">Min Price: </span>
-                                    <span class="price-range__min">$250</span>
+                                    <span class="price-range__min">$1</span>
                                 </div>
                                 <div>
                                     <span class="text-secondary">Max Price: </span>
-                                    <span class="price-range__max">$450</span>
+                                    <span class="price-range__max">$500</span>
                                 </div>
                             </div>
                         </div>
@@ -473,8 +469,8 @@
         <input type="hidden" name="order" id="order" value="{{ $order }}">
         <input type="hidden" name="brands" id="hdnBrands">
         <input type="hidden" name="categories" id="hdnCategories">
-        {{-- <input type="hidden" name="min" id="hdnMinPrice" value="{{ $min_price }}"> --}}
-        {{-- <input type="hidden" name="max" id="hdnMaxPrice" value="{{ $max_price }}"> --}}
+        <input type="hidden" name="min" id="hdnMinPrice" value="{{ $min_price }}">
+        <input type="hidden" name="max" id="hdnMaxPrice" value="{{ $max_price }}">
     </form>
 @endsection
 
@@ -522,15 +518,15 @@
                 $('#frmfilter').submit();
             });
 
-            // $("[name='price_range']").on('change', function() {
-            //     var min = $(this).val().split(',')[0];
-            //     var max = $(this).val().split(',')[1];
-            //     $("#hdnMinPrice").val(min);
-            //     $("#hdnMaxPrice").val(max);
-            //     setTimeout(() => {
-            //         $('#frmfilter').submit();
-            //     }, 2000);
-            // });
+            $("[name='price_range']").on('change', function() {
+                var min = $(this).val().split(',')[0];
+                var max = $(this).val().split(',')[1];
+                $("#hdnMinPrice").val(min);
+                $("#hdnMaxPrice").val(max);
+                setTimeout(() => {
+                    $('#frmfilter').submit();
+                }, 2000);
+            });
         });
     </script>
 @endpush
