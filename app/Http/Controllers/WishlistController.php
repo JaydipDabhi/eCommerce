@@ -22,13 +22,13 @@ class WishlistController extends Controller
     public function remove_wishlist($rowId)
     {
         Cart::instance('wishlist')->remove($rowId);
-        return redirect()->back();
+        return redirect()->back()->with('status', 'Item Removed successfully in wishlist.');
     }
 
     public function empty_wishlist()
     {
         Cart::instance('wishlist')->destroy();
-        return redirect()->back();
+        return redirect()->back()->with('status', 'Wishlist empty successfully.');
     }
 
     public function move_to_cart($rowId)
